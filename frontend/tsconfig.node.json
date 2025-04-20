@@ -1,0 +1,14 @@
+{
+  "extends": "./tsconfig.json",
+  "compilerOptions": {
+    "tsBuildInfoFile": "./node_modules/.tmp/tsconfig.node.tsbuildinfo", // Store incremental build info
+    "target": "ES2022", // Target modern JavaScript
+    "module": "CommonJS", // Use CommonJS modules for Node.js
+    "lib": ["ES2023"], // Include ES2023 library
+    "moduleResolution": "node", // Resolve modules using Node.js resolution
+    "isolatedModules": true, // Ensure each file can be transpiled independently
+    "composite": true // Enable project references
+  },
+  "include": ["src/**/*"], // Include all files in the src directory
+  "exclude": ["node_modules", "dist", "build", "coverage"] // Exclude unnecessary directories
+}

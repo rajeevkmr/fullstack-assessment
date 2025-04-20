@@ -1,0 +1,13 @@
+{
+  "extends": "./tsconfig.json",
+  "compilerOptions": {
+    "jsx": "react-jsx", // Use React JSX transform
+    "baseUrl": "./src", // Set the base URL for module resolution
+    "paths": {
+      "@components/*": ["components/*"], // Example alias for components
+      "@utils/*": ["utils/*"] // Example alias for utilities
+    }
+  },
+  "include": ["src/**/*"], // Include all files in the src directory
+  "exclude": ["node_modules", "dist", "build", "coverage"] // Exclude unnecessary directories
+}

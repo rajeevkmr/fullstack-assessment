@@ -1,0 +1,15 @@
+FROM node:20-alpine
+
+#set working dir
+WORKDIR /backend
+COPY package*.json ./
+
+#install dependencies
+RUN npm install
+
+#copy all source in app dir
+COPY . .
+
+#start the project
+
+CMD ["npm", "run", "dev"]
