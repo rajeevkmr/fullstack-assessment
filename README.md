@@ -8,9 +8,6 @@
 - [Setup Instructions](#setup-instructions)
 - [Usage](#usage)
 - [API Endpoints](#api-endpoints)
-- [Folder Structure](#folder-structure)
-- [Contributing](#contributing)
-- [License](#license)
 
 ---
 
@@ -71,82 +68,105 @@ The **Assessment Project** is a full-stack application designed to manage and di
    ```
 2. Install dependencies for both frontend and backend:
 
-# Install backend dependencies
+   Install backend dependencies
 
-cd backend
-npm install
+   ```bash
+   cd backend
+   npm install
+   ```
 
-# Install frontend dependencies
+   Install frontend dependencies
 
-cd ../frontend
-npm install
+   ```bash
+   cd ../frontend
+   npm install
+   ```
 
-3. Set up environment variables:  
-    Create a .env file in the frontend directory with the following:
-   VITE_API_BASE_URL=http://localhost:5001/api
+3. Set up environment variables:
+
+   - Create a .env file in the frontend directory with the following:
+   - VITE_API_BASE_URL=http://localhost:5001/api
 
 4. Run the application:
-   Use Docker Compose to build and start the containers:
-   docker-compose up --build
+
+   - Use Docker Compose to build and start the containers:
+   - docker-compose up --build
 
 5. Access the application:
-   a. Frontend: Open your browser and navigate to http://localhost:3000.
-   b. Backend: The API will be available at http://localhost:5001/api.
+
+   - Frontend: Open your browser and navigate to http://localhost:3000.
+   - Backend: The API will be available at http://localhost:5001/api.
 
 6. Stop the application:
-   To stop the containers, run:
-   docker-compose down
+   - To stop the containers, run:
+     ```bash
+         docker-compose down
+     ```
 
-Manual Setup  
- If you prefer to run the application without Docker, follow these steps:
+## Manual Setup:
 
-Prerequisites:
-Node.js (v16 or higher)
-MongoDB (running locally or in the cloud)
+- If you prefer to run the application without Docker, follow these steps:
 
-Steps:
+### Prerequisites:
+
+- Node.js (v16 or higher)
+- MongoDB (running locally or in the cloud)
+
+### Steps:
 
 1. Clone the repository:
    git clone https://github.com/your-username/assessment-project.git
    cd assessment-project
 2. Install dependencies for both frontend and backend:
 
-   # Install backend dependencies
+   - Install backend dependencies
 
+   ```bash
    cd backend
    npm install
+   ```
 
-   # Install frontend dependencies
+   ### Install frontend dependencies
 
+   ```bash
    cd ../frontend
    npm install
+   ```
 
 3. Set up environment variables:
-   Create a .env file in the frontend directory with the following:
-   VITE_API_BASE_URL=http://localhost:5001/api
+
+   - Create a .env file in the frontend directory with the following:
+   - VITE_API_BASE_URL=http://localhost:5001/api
 
 4. Start the backend server:
+   ```bash
    cd backend
    npm start
+   ```
 5. Start the frontend development server:
+
+   ```bash
    cd frontend
    npm run dev
+   ```
 
 6. Open your browser and navigate to
-   Frontend: http://localhost:3000
-   Backend: The API will be available at http://localhost:5001/api.
+   - Frontend: http://localhost:3000
+   - Backend: The API will be available at http://localhost:5001/api.
 
 # Usage
 
 1.  View Sales Data:
-    a. Navigate to the homepage to view the sales data in a table format.
-    b. Use filters and the search bar to refine the data.
+
+    - Navigate to the homepage to view the sales data in a table format.
+    - Use filters and the search bar to refine the data.
 
 2.  Upload Sales Data:
-    a. Go to the "Upload" page and upload a CSV file to populate the database.
+
+    - Go to the "Upload" page and upload a CSV file to populate the database.
 
 3.  Pagination:
-    a. Use the pagination controls to navigate through large datasets.
+    - Use the pagination controls to navigate through large datasets.
 
 ## API Endpoints
 
@@ -155,27 +175,3 @@ Steps:
 | POST   | /api/upload               | Upload CSV file          |
 | GET    | /api/sales                | Fetch all sales records  |
 | GET    | /api/sales/upload-history | Fetch all upload history |
-
-# Folder Structure
-
-assessment-project/
-├── backend/
-│ ├── src/
-│ │ ├── controllers/ # Business logic
-│ │ ├── models/ # Mongoose schemas
-│ │ ├── routes/ # API routes
-│ │ ├── services/ # Utility services
-│ │ └── app.js # Express app setup
-| | └── config.js # configuration settings
-│ |
-│ └── index.js # Server entry point
-├── frontend/
-│ ├── src/
-│ │ ├── components/ # Reusable components
-│ │ ├── containers/ # Page-level components
-│ │ ├── services/ # API service functions
-│ │ └── App.tsx # Main React component
-│ ├── .env # Frontend environment variables
-│ └── vite.config.ts # Vite configuration
-└── docker-compose.yml # Docker Compose configuration
-└── README.md # Project documentation
