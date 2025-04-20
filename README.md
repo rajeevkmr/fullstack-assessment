@@ -63,7 +63,7 @@ The **Assessment Project** is a full-stack application designed to manage and di
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/your-username/assessment-project.git
+   git clone https://github.com/rajeevkmr/fullstack-assessment.git
    cd assessment-project
    ```
 2. Install dependencies for both frontend and backend:
